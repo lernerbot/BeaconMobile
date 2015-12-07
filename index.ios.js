@@ -7,6 +7,7 @@ var SignOutView = require('./SignOutView');
 var SignOutAction = require('./SignOutAction');
 var UpcomingEventsTab = require('./UpcomingEventsTab');
 var MapViewTab = require('./MapViewTab');
+var MyEventsTab = require('./MyEventsTab');
 var STORAGE_KEY = '@BeaconMobile:authToken';
 
 var {
@@ -127,7 +128,7 @@ var Beacon = React.createClass({
                 selectedTab: 'upcomingeventstab'
               });
             }}>
-            <UpcomingEventsTab authToken={this.state.authToken} />
+            <MyEventsTab authToken={this.state.authToken} />
         </TabBarIOS.Item>
         <TabBarIOS.Item
             selected={this.state.selectedTab === 'mapviewtab'}
