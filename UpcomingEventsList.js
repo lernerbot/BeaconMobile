@@ -21,7 +21,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
     padding: 10,
   },
   thumbnail: {
@@ -44,8 +44,8 @@ var styles = StyleSheet.create({
     backgroundColor: '#dddddd'
   },
   listView:{
-    marginTop: 70,
-    backgroundColor: '#F5FCFF'
+    marginTop: 65,
+    backgroundColor: '#FFFFFF'
   },
   loading:{
     flex: 1,
@@ -75,6 +75,7 @@ var UpcomingEventsList = React.createClass({
       method: 'GET',
     })
     .then((responseData) => {
+      console.log(responseData);
       var body = JSON.parse(responseData._bodyText);
       console.log("Name:", body.activity.name);
       var name = body.activity;

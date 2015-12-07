@@ -35,6 +35,7 @@ var SignInView = React.createClass({
   render: function(){
     return(
       <NavigatorIOS
+        navigationBarHidden={true}
         style={styles.container}
         initialRoute={{
           title: 'Sign In',

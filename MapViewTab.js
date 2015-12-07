@@ -36,6 +36,7 @@ var MapViewTab = React.createClass({
     console.log("MapViewTab Render Run");
     return(
       <NavigatorIOS
+        navigationBarHidden={true}
         style={styles.container}
         initialRoute={{
           title: 'Events Map',

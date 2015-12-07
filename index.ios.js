@@ -102,10 +102,15 @@ var Beacon = React.createClass({
 
 
     return(
-      <TabBarIOS selectedTab={this.state.selectedTab}>
+      <TabBarIOS selectedTab={this.state.selectedTab}
+        tintColor="red"
+        barTintColor="lightgray"
+        translucent={true}
+        >
         <TabBarIOS.Item
             selected={this.state.selectedTab === 'signinview'}
-            systemIcon = "search"
+            icon={require('./img/ic_settings@3x.png')}
+            title="Settings"
             onPress={() => {
               this.setState({
                 selectedTab: 'signinview'
@@ -115,7 +120,8 @@ var Beacon = React.createClass({
         </TabBarIOS.Item>
         <TabBarIOS.Item
             selected={this.state.selectedTab === 'upcomingeventstab'}
-            systemIcon = "featured"
+            icon={require('./img/ic_event@3x.png')}
+            title="Events"
             onPress={() => {
               this.setState({
                 selectedTab: 'upcomingeventstab'
@@ -125,7 +131,8 @@ var Beacon = React.createClass({
         </TabBarIOS.Item>
         <TabBarIOS.Item
             selected={this.state.selectedTab === 'mapviewtab'}
-            systemIcon = "more"
+            icon={require('./img/ic_navigation@3x.png')}
+            title="Map"
             onPress={() => {
               this.setState({
                 selectedTab: 'mapviewtab'
