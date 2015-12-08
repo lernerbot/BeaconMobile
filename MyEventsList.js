@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var MyEventsDetail = require('./MyEventsDetail');
+//var MapExample = require('./MapExample');
 
 
 var {
@@ -75,7 +76,7 @@ var MyEventsList = React.createClass({
       method: 'GET',
     })
     .then((responseData) => {
-      console.log("My Events Response Data:", responseData);
+      //console.log("My Events Response Data:", responseData);
       var body = JSON.parse(responseData._bodyInit);
       console.log("Events:", body);
       this.setState({
@@ -113,12 +114,17 @@ var MyEventsList = React.createClass({
   },
 
   showEventDetail: function(eventItem){
-    //console.log("showEventDetail", eventItem);
+    console.log("showEventDetail", eventItem);
     this.props.navigator.push({
       title: eventItem.name,
       component: MyEventsDetail,
       passProps: {eventItem}
     });
+
+    /*this.props.navigator.push({
+      title: "Map Example",
+      component: MapExample,
+    });*/
   },
 
   renderEvent: function(eventItem){
